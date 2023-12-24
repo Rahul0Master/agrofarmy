@@ -1,0 +1,323 @@
+@font-face {
+    font-family: nb;
+    src: url(./NBInternationalProBoo.ttf);
+}
+
+@font-face {
+    font-family: rj;
+    src: url(./Rejouice-Headline.ttf);
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: nb;
+}
+
+html,
+body {
+    height: 100%;
+    width: 100%;
+}
+
+#page1 {
+    height: 100vh;
+    width: 100%;
+    background-color: #dadada;
+    position: relative;
+}
+
+#cursor {
+    height: 7vw;
+    width: 7vw;
+    border-radius: 50%;
+    background-color: wheat;
+    color: rgb(51, 65, 23);
+    font-size: 1.2vw;
+    position: fixed;
+    z-index: 2;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transform: translate(-50%, -50%);
+}
+
+#cursor h5 {
+    font-size: 1vw;
+    font-weight: 500;
+    color: white;
+    font-weight: bolder;
+}
+
+#page1 video {
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+    position: absolute;
+}
+
+#page1-content {
+    width: 100%;
+    height: 100%;
+    /* background-color: rgb(0, 0, 0, 0.6); */
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-direction: column;
+    z-index: 3;
+}
+
+nav {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    color: wheat;
+    padding: 3vw 4vw;
+}
+
+nav h3 {
+    border: 2px solid transparent;
+    padding: 0.5vw;
+    border-radius: 20px;
+    background-color: rgb(105, 134, 59);
+    font-size: 1.4vw;
+    font-weight: 100;
+}
+
+nav button {
+    border: 2px solid transparent;
+    padding: 0.5vw;
+    border-radius: 20px;
+    background-color: rgb(105, 134, 59);
+    font-size: 1.4vw;
+    font-weight: 100;
+}
+
+#page1-content h1 {
+    color: rgb(216, 186, 128);
+    font-family: rj;
+    font-size: 20vw;
+    font-weight: 100;
+    line-height: 20vw;
+}
+
+#page1-content h1 span {
+    font-family: rj;
+    display: inline-block;
+}
+
+#page2 {
+    height: 100vh;
+    width: 100%;
+    background-color: #dbdbdb;
+    position: relative;
+    padding: 5vw 2.8vw;
+}
+
+.page2-top {
+    display: flex;
+    align-items: flex-end;
+    justify-content: space-between;
+    padding-bottom: 1.2vw;
+    margin-bottom: 1vw;
+    border-bottom: 1px solid black;
+}
+
+.page2-top h3 {
+    font-size: 1.7vw;
+    font-weight: 500;
+    width: 26%;
+}
+
+.page2-top h4 {
+    font-size: 1.7vw;
+    font-weight: 500;
+}
+
+.elem {
+    overflow: hidden;
+}
+
+.elem h1 {
+    margin-top: 4vw;
+    font-size: 3.8vw;
+    font-weight: 500;
+}
+
+.elem h1 span {
+    padding-left: 9.5vw;
+}
+
+#page3 {
+    min-height: 100vh;
+    width: 100%;
+    position: relative;
+    padding: 3vw;
+    background-color: #dbdbdb;
+}
+
+#page3-top {
+    /* background-color: red; */
+    text-align: center;
+}
+
+#page3-top h4 {
+    margin-bottom: 1vw;
+    font-size: 1vw;
+    font-weight: 500;
+}
+
+#page3-top h2 {
+    font-size: 4vw;
+    font-weight: 500;
+}
+
+#page3-top h4 span {
+    font-size: 0.7vw;
+    background-color: black;
+    color: #fff;
+    padding: 4px 10px;
+    border-radius: 10px;
+    rotate: -90deg;
+}
+
+#page3-elements {
+    height: 100vh;
+    width: 100%;
+    /* background-color: red; */
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-top: 10vw;
+}
+
+#page3-elements .box {
+    height: 80%;
+    ;
+    width: 30%;
+    /* background-color: blue; */
+    position: relative;
+}
+
+#page3-elements .box video {
+    margin-top: 1px;
+    height: 99.8%;
+    width: 99.8%;
+    object-fit: cover;
+    object-position: center;
+}
+
+#page3-elements .box img {
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+    object-position: center;
+    transition: all linear 0.8s;
+
+}
+
+#page3-elements .box:hover img {
+    opacity: 0;
+}
+
+#loader {
+    height: 100%;
+    width: 100%;
+    position: fixed;
+    top: 0;
+    background-color: #000;
+    z-index: 100;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    gap: 8px;
+}
+
+#loader h3 {
+    font-family: rj;
+    font-size: 1.7vw;
+    font-weight: 100;
+}
+
+
+
+
+.dropdown {
+    position: relative;
+    display: inline-block;
+}
+
+/* Style for the button */
+.dropdown-button {
+    background-color: rgb(105, 134, 59);
+    color: wheat;
+    padding: 10px;
+    border: none;
+    cursor: pointer;
+}
+
+/* Style for the dropdown content */
+.dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: wheat;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+    z-index: 1;
+}
+
+/* Style for dropdown options */
+.dropdown-content a {
+    color: rgb(105, 134, 59);
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+}
+
+/* Change color on hover */
+.dropdown-content a:hover {
+    background-color: #f1f1f1;
+}
+
+/* Show the dropdown menu when the button is clicked */
+.show {
+    display: block;
+}
+
+
+#page4 {
+    min-height: 100vh;
+    width: 100%;
+    background-color: #dbdbdb;
+    position: relative;
+    padding: 5vw 2.8vw;
+}
+
+.page4-top {
+    display: flex;
+    align-items: flex-end;
+    justify-content: space-between;
+    padding-bottom: 1.2vw;
+    margin-bottom: 1vw;
+    border-bottom: 1px solid black;
+}
+
+.page4-top h3 {
+    font-size: 1.5vw;
+    font-weight: 500;
+    width: 26%;
+}
+
+.elem h1 {
+    margin-top: 4vw;
+    font-size: 3.8vw;
+    font-weight: 500;
+}
+
+.elem h1 span {
+    padding-left: 9.5vw;
+}
+
